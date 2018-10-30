@@ -4,15 +4,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component';
+import { SignatureComponent } from './signature/signature.component';
+import { SignaturePadModule } from 'angular2-signaturepad';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SignatureComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    SignaturePadModule
   ],
   providers: [],
   bootstrap: [AppComponent]
