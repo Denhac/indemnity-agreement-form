@@ -1,13 +1,18 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { SignaturePad } from 'angular2-signaturepad/signature-pad';
+import { ErrorStateMatcher } from '@angular/material/core';
+
 
 @Component({
   selector: 'app-signature',
   templateUrl: './signature.component.html',
   styleUrls: ['./signature.component.scss']
 })
+
 export class SignatureComponent {
   @ViewChild(SignaturePad) signaturePad: SignaturePad;
+
 
   private signaturePadOptions: Object = {
     'minWidth': 5,
@@ -31,3 +36,4 @@ export class SignatureComponent {
   }
 
 }
+

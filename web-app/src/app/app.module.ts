@@ -6,6 +6,10 @@ import { MatCardModule } from '@angular/material/card';
 import { AppComponent } from './app.component';
 import { SignatureComponent } from './signature/signature.component';
 import { SignaturePadModule } from 'angular2-signaturepad';
+import { MatInputModule } from '@angular/material/input';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +20,12 @@ import { SignaturePadModule } from 'angular2-signaturepad';
     BrowserModule,
     BrowserAnimationsModule,
     MatCardModule,
-    SignaturePadModule
+    SignaturePadModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
