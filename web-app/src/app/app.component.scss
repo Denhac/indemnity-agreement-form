@@ -2,3 +2,24 @@
   margin: 30px;
   padding: 30px;
 }
+
+.left_col,
+.right_col {
+  width: 48%;
+
+}
+
+.left_col {
+
+  float: left;
+
+}
+
+.right_col {
+
+  float: right;
+}
+
+.example-form {
+  width: 100%;
+}

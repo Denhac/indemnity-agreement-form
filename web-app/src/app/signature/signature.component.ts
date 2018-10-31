@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { SignaturePad } from 'angular2-signaturepad/signature-pad';
-import { ErrorStateMatcher } from '@angular/material/core';
+
 
 
 @Component({
