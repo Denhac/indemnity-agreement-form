@@ -13,23 +13,28 @@ import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SignatureComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    SignaturePadModule,
-    MatInputModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatButtonModule
+    declarations: [
+        AppComponent,
+        SignatureComponent
+    ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatCardModule,
+        SignaturePadModule,
+        MatInputModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatButtonModule
 
 
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+
+export class AppModule {
+
+
+}

@@ -25,7 +25,15 @@ export class AppComponent {
     Validators.required,
   ]);
 
+  onSubmit() {
+    if (this.nameFormControl.hasError('required')) {
+      console.log("Name ERROR");
+    }
+    else {
 
+    }
+
+  }
   matcher = new MyErrorStateMatcher();
 }
 
