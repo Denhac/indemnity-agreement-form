@@ -10,13 +10,17 @@ import { MatInputModule } from '@angular/material/input';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogOverviewExampleDialog } from './app.component'
 
 
 @NgModule({
     declarations: [
         AppComponent,
-        SignatureComponent
+        SignatureComponent,
+        DialogOverviewExampleDialog
     ],
+
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
@@ -25,10 +29,10 @@ import { MatButtonModule } from '@angular/material/button';
         MatInputModule,
         FormsModule,
         ReactiveFormsModule,
-        MatButtonModule
-
-
+        MatButtonModule,
+        MatDialogModule
     ],
+    entryComponents: [DialogOverviewExampleDialog],
     providers: [],
     bootstrap: [AppComponent]
 })
