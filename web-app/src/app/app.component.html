@@ -1,7 +1,12 @@
 <mat-card>
   <h1>Welcome to Denhac!</h1>
   <p>Please take a moment to review the below form and sign it</p>
-  <p>Info about Denhac</p>
+  <p>denhac is a 501(c)3 organization, supported by a community of volunteers and members who contribute to the space
+    with memberships, donations, and time.</p>
+  <p>denhac is a vibrant and growing community. Come visit us at one of our open houses on Tuesday nights at 8:00 PM.
+    If you like what you see, please feel free to donate money or equipment, or become a member for unlimited 24/7
+    access
+    to the space and all the awesomeness inside!</p>
 </mat-card>
 <mat-card class="agreement-form">
   <h2 class="center">RELEASE AND INDEMNITY AGREEMENT</h2>
@@ -36,24 +41,24 @@
     </div>
     <div class="row">
       <div class="col">
-        <app-signature></app-signature>
-      </div>
-      <div class="col">
         <mat-form-field class="example-full-width">
           <input matInput placeholder="Email (Optional)" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
-          <mat-hint>For updates and information!</mat-hint>
+          <!-- <mat-hint>Looking Good!</mat-hint> -->
           <mat-error *ngIf="emailFormControl.hasError('email')">
             Please enter a valid email address
           </mat-error>
         </mat-form-field>
       </div>
+      <div class="col">
+        <app-signature></app-signature>
+      </div>
+
     </div>
 
 
 
-    <div class="row">
-      <span flex></span>
-      <button mat-raised-button color="primary">I Agree</button>
+    <div class="center">
+      <button mat-raised-button layout-align="center center" color="primary">I Agree</button>
     </div>
   </form>
 </mat-card>

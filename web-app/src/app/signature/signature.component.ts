@@ -6,7 +6,10 @@ import { SignaturePad } from 'angular2-signaturepad/signature-pad';
 @Component({
   selector: 'app-signature',
   templateUrl: './signature.component.html',
-  styleUrls: ['./signature.component.scss']
+  styleUrls: ['./signature.component.scss'],
+  // host: {
+  //   '(window:resize)': 'onResize($event)'
+  // }
 })
 
 export class SignatureComponent {
@@ -15,8 +18,8 @@ export class SignatureComponent {
 
   private signaturePadOptions: Object = {
     'minWidth': 5,
-    'canvasWidth': 500,
-    'canvasHeight': 300
+    'canvasWidth': 400,
+    'canvasHeight': 150
   };
   ngAfterViewInit() {
     // this.signaturePad is now available
