@@ -1,0 +1,2 @@
+FLASK_APP=IAFbackend.py
+FLASK_ENV=development

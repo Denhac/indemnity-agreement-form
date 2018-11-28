@@ -60,5 +60,9 @@ typings/
 # next.js build output
 .next
 
-# includ venv folder
+# include venv folder
 venv/
+
+# ignore sublime project files 
+*.sublime-workspace
+*.sublime-project
