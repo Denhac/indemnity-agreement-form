@@ -10,26 +10,35 @@ import { MatInputModule } from '@angular/material/input';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogOverviewExampleDialog } from './app.component'
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SignatureComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    SignaturePadModule,
-    MatInputModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatButtonModule
+    declarations: [
+        AppComponent,
+        SignatureComponent,
+        DialogOverviewExampleDialog
+    ],
 
-
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatCardModule,
+        SignaturePadModule,
+        MatInputModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatButtonModule,
+        MatDialogModule
+    ],
+    entryComponents: [DialogOverviewExampleDialog],
+    providers: [],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+
+export class AppModule {
+
+
+}

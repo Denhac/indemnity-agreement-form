@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
 import { SignaturePad } from 'angular2-signaturepad/signature-pad';
 
 
@@ -6,17 +6,22 @@ import { SignaturePad } from 'angular2-signaturepad/signature-pad';
 @Component({
   selector: 'app-signature',
   templateUrl: './signature.component.html',
-  styleUrls: ['./signature.component.scss']
+  styleUrls: ['./signature.component.scss'],
+  // host: {
+  //   '(window:resize)': 'onResize($event)'
+  // }
 })
 
 export class SignatureComponent {
   @ViewChild(SignaturePad) signaturePad: SignaturePad;
+  @Output() signatureCompleted: EventEmitter<any> = new EventEmitter();
+
 
 
   private signaturePadOptions: Object = {
     'minWidth': 5,
-    'canvasWidth': 500,
-    'canvasHeight': 300
+    'canvasWidth': 400,
+    'canvasHeight': 150
   };
   ngAfterViewInit() {
     // this.signaturePad is now available
@@ -27,6 +32,7 @@ export class SignatureComponent {
   drawComplete() {
     // will be notified of szimek/signature_pad's onEnd event
     console.log(this.signaturePad.toDataURL());
+    this.signatureCompleted.emit(null);
   }
 
   drawStart() {
